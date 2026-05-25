@@ -1,6 +1,168 @@
 {
-  "updated_at": "",
-  "season": null,
-  "match_count": 0,
-  "team_stats": {}
+  "updated_at": "2026-05-25T11:45:34.490923+00:00",
+  "season": 2025,
+  "match_count": 380,
+  "team_stats": {
+    "アルビレックス新潟": {
+      "home_games": 19,
+      "home_wins": 2,
+      "away_games": 19,
+      "away_wins": 2,
+      "home_win_rate": 0.1053,
+      "away_win_rate": 0.1053
+    },
+    "アビスパ福岡": {
+      "home_games": 19,
+      "home_wins": 7,
+      "away_games": 19,
+      "away_wins": 5,
+      "home_win_rate": 0.3684,
+      "away_win_rate": 0.2632
+    },
+    "セレッソ大阪": {
+      "home_games": 19,
+      "home_wins": 8,
+      "away_games": 19,
+      "away_wins": 6,
+      "home_win_rate": 0.4211,
+      "away_win_rate": 0.3158
+    },
+    "Fagiano Okayama": {
+      "home_games": 19,
+      "home_wins": 7,
+      "away_games": 19,
+      "away_wins": 5,
+      "home_win_rate": 0.3684,
+      "away_win_rate": 0.2632
+    },
+    "ガンバ大阪": {
+      "home_games": 19,
+      "home_wins": 12,
+      "away_games": 19,
+      "away_wins": 5,
+      "home_win_rate": 0.6316,
+      "away_win_rate": 0.2632
+    },
+    "鹿島アントラーズ": {
+      "home_games": 19,
+      "home_wins": 13,
+      "away_games": 19,
+      "away_wins": 10,
+      "home_win_rate": 0.6842,
+      "away_win_rate": 0.5263
+    },
+    "柏レイソル": {
+      "home_games": 19,
+      "home_wins": 12,
+      "away_games": 19,
+      "away_wins": 9,
+      "home_win_rate": 0.6316,
+      "away_win_rate": 0.4737
+    },
+    "川崎フロンターレ": {
+      "home_games": 19,
+      "home_wins": 8,
+      "away_games": 19,
+      "away_wins": 7,
+      "home_win_rate": 0.4211,
+      "away_win_rate": 0.3684
+    },
+    "京都サンガ": {
+      "home_games": 19,
+      "home_wins": 9,
+      "away_games": 19,
+      "away_wins": 10,
+      "home_win_rate": 0.4737,
+      "away_win_rate": 0.5263
+    },
+    "FC町田ゼルビア": {
+      "home_games": 19,
+      "home_wins": 9,
+      "away_games": 19,
+      "away_wins": 8,
+      "home_win_rate": 0.4737,
+      "away_win_rate": 0.4211
+    },
+    "名古屋グランパス": {
+      "home_games": 19,
+      "home_wins": 8,
+      "away_games": 19,
+      "away_wins": 3,
+      "home_win_rate": 0.4211,
+      "away_win_rate": 0.1579
+    },
+    "サンフレッチェ広島": {
+      "home_games": 19,
+      "home_wins": 10,
+      "away_games": 19,
+      "away_wins": 10,
+      "home_win_rate": 0.5263,
+      "away_win_rate": 0.5263
+    },
+    "湘南ベルマーレ": {
+      "home_games": 19,
+      "home_wins": 5,
+      "away_games": 19,
+      "away_wins": 3,
+      "home_win_rate": 0.2632,
+      "away_win_rate": 0.1579
+    },
+    "清水エスパルス": {
+      "home_games": 19,
+      "home_wins": 6,
+      "away_games": 19,
+      "away_wins": 5,
+      "home_win_rate": 0.3158,
+      "away_win_rate": 0.2632
+    },
+    "FC東京": {
+      "home_games": 19,
+      "home_wins": 8,
+      "away_games": 19,
+      "away_wins": 5,
+      "home_win_rate": 0.4211,
+      "away_win_rate": 0.2632
+    },
+    "東京ヴェルディ": {
+      "home_games": 19,
+      "home_wins": 8,
+      "away_games": 19,
+      "away_wins": 3,
+      "home_win_rate": 0.4211,
+      "away_win_rate": 0.1579
+    },
+    "浦和レッズ": {
+      "home_games": 19,
+      "home_wins": 13,
+      "away_games": 19,
+      "away_wins": 3,
+      "home_win_rate": 0.6842,
+      "away_win_rate": 0.1579
+    },
+    "ヴィッセル神戸": {
+      "home_games": 19,
+      "home_wins": 10,
+      "away_games": 19,
+      "away_wins": 8,
+      "home_win_rate": 0.5263,
+      "away_win_rate": 0.4211
+    },
+    "Yokohama FC": {
+      "home_games": 19,
+      "home_wins": 6,
+      "away_games": 19,
+      "away_wins": 3,
+      "home_win_rate": 0.3158,
+      "away_win_rate": 0.1579
+    },
+    "横浜F・マリノス": {
+      "home_games": 19,
+      "home_wins": 7,
+      "away_games": 19,
+      "away_wins": 5,
+      "home_win_rate": 0.3684,
+      "away_win_rate": 0.2632
+    }
+  },
+  "source": "Wikipedia (CC-BY-SA) https://en.wikipedia.org/wiki/J1_League"
 }

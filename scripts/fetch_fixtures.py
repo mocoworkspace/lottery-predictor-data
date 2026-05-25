@@ -290,13 +290,25 @@ def scrape_wikipedia_j1(year: int):
 historical_season = None
 team_stats = {}
 
+MIN_MATCHES_CURRENT = 100   # 進行中シーズンを採用する最低試合数（約5節相当）
+MIN_MATCHES_PREVIOUS = 200  # 前年データを採用する最低試合数
+
 if SCRAPING_AVAILABLE:
-    # 直近の完了済みシーズン（前年→前々年）から順に試みる
-    for hist_year in [current_year - 1, current_year - 2]:
+    # 今シーズン → 前年 → 前々年 の順に試みる
+    for hist_year in [current_year, current_year - 1, current_year - 2]:
         historical_season, team_stats = scrape_wikipedia_j1(hist_year)
-        if team_stats:
-            print(f'Using J1 {historical_season} data for historical stats.')
+        if not team_stats:
+            continue
+        total_matches = sum(v['home_games'] for v in team_stats.values())
+        threshold = MIN_MATCHES_CURRENT if hist_year == current_year else MIN_MATCHES_PREVIOUS
+        if total_matches >= threshold:
+            print(f'Using J1 {historical_season} data '
+                  f'({total_matches} matches, {len(team_stats)} teams).')
             break
+        else:
+            print(f'J1 {hist_year}: only {total_matches} matches '
+                  f'(need {threshold}), trying previous year...')
+            team_stats = {}
     if not team_stats:
         print('Warning: Could not retrieve historical data from Wikipedia.')
 else:

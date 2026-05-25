@@ -53,6 +53,12 @@ TEAM_NAME_JP = {
     'Omiya Ardija':               '大宮アルディージャ',
     'V-Varen Nagasaki':           'V・ファーレン長崎',
     'Tokushima Vortis':           '徳島ヴォルティス',
+    'Fagiano Okayama':            'ファジアーノ岡山',
+    'Renofa Yamaguchi':           'レノファ山口',
+    'Blaublitz Akita':            'ブラウブリッツ秋田',
+    'Thespakusatsu Gunma':        'ザスパクサツ群馬',
+    'FC Imabari':                 'FC今治',
+    'Roasso Kumamoto':            'ロアッソ熊本',
 }
 
 

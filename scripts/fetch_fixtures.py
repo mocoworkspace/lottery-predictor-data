@@ -229,7 +229,7 @@ def scrape_wikipedia_j1(year: int):
     if ('Wikipedia does not have an article' in resp.text
             or 'Wikipedia does not yet have an article' in resp.text):
         print('  -> Page does not exist')
-        return None, {}
+        return None, {}, []
 
     soup = BeautifulSoup(resp.text, 'lxml')
     h1 = soup.find('h1', {'id': 'firstHeading'})
@@ -261,7 +261,7 @@ def scrape_wikipedia_j1(year: int):
 
     if results_table is None:
         print('  -> No results cross-table found on this page')
-        return None, {}
+        return None, {}, []
 
     rows_all = results_table.find_all('tr')
 
@@ -297,6 +297,7 @@ def scrape_wikipedia_j1(year: int):
         t: {'home_games': 0, 'home_wins': 0, 'away_games': 0, 'away_wins': 0}
         for t in team_list
     }
+    match_records = []  # 個別試合結果
     match_count = 0
 
     for i, row in enumerate(rows_all[1:]):
@@ -326,6 +327,12 @@ def scrape_wikipedia_j1(year: int):
                     team_stats[home_jp]['home_wins'] += 1
                 elif as_ > hs:
                     team_stats[away_jp]['away_wins'] += 1
+                match_records.append({
+                    'home': home_jp,
+                    'away': away_jp,
+                    'home_score': hs,
+                    'away_score': as_,
+                })
                 match_count += 1
 
     # 試合数が少なすぎるチームは除外（取得途中のシーズンデータの混入対策）
@@ -336,14 +343,15 @@ def scrape_wikipedia_j1(year: int):
 
     if match_count == 0:
         print('  -> No scores parsed (season may not have results yet)')
-        return None, {}
+        return None, {}, []
 
     print(f'  -> Success: {match_count} matches, {len(team_stats)} teams')
-    return year, team_stats
+    return year, team_stats, match_records
 
 
 historical_season = None
 team_stats = {}
+match_records = []
 
 MIN_MATCHES_CURRENT = 100   # 進行中シーズンを採用する最低試合数（約5節相当）
 MIN_MATCHES_PREVIOUS = 200  # 前年データを採用する最低試合数
@@ -351,7 +359,7 @@ MIN_MATCHES_PREVIOUS = 200  # 前年データを採用する最低試合数
 if SCRAPING_AVAILABLE:
     # 今シーズン → 前年 → 前々年 の順に試みる
     for hist_year in [current_year, current_year - 1, current_year - 2]:
-        historical_season, team_stats = scrape_wikipedia_j1(hist_year)
+        historical_season, team_stats, match_records = scrape_wikipedia_j1(hist_year)
         if not team_stats:
             continue
         total_matches = sum(v['home_games'] for v in team_stats.values())
@@ -364,6 +372,7 @@ if SCRAPING_AVAILABLE:
             print(f'J1 {hist_year}: only {total_matches} matches '
                   f'(need {threshold}), trying previous year...')
             team_stats = {}
+            match_records = []
     if not team_stats:
         print('Warning: Could not retrieve historical data from Wikipedia.')
 else:
@@ -379,10 +388,12 @@ for stats in team_stats.values():
 historical_output = {
     'updated_at': datetime.now(timezone.utc).isoformat(),
     'season': historical_season,
-    'match_count': sum(v['home_games'] for v in team_stats.values()),
+    'match_count': len(match_records),
     'team_stats': team_stats,
+    'matches': match_records,
     'source': 'Wikipedia (CC-BY-SA) https://en.wikipedia.org/wiki/J1_League',
 }
 with open('historical.json', 'w', encoding='utf-8') as f:
     json.dump(historical_output, f, ensure_ascii=False, indent=2)
-print(f'historical.json updated: season={historical_season}, {len(team_stats)} teams.')
+print(f'historical.json updated: season={historical_season}, '
+      f'{len(team_stats)} teams, {len(match_records)} matches.')

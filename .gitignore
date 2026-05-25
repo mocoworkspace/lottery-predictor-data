@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local CSV files (too large / provided manually; do not commit)
+csv/*.csv

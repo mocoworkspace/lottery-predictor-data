@@ -216,20 +216,20 @@ def scrape_wikipedia_j1(year: int):
     resp = _polite_get(url, hdrs)
     if resp is None:
         print('  -> Failed after retries')
-        return None, {}
+        return None, {}, []
     if resp.status_code == 404:
         print('  -> 404 Not Found')
-        return None, {}
+        return None, {}, []
     try:
         resp.raise_for_status()
     except Exception as e:
         print(f'  -> HTTP error: {e}')
-        return None, {}
+        return None, {}, []
 
     if ('Wikipedia does not have an article' in resp.text
             or 'Wikipedia does not yet have an article' in resp.text):
         print('  -> Page does not exist')
-        return None, {}, []
+        return None, {}, [], []
 
     soup = BeautifulSoup(resp.text, 'lxml')
     h1 = soup.find('h1', {'id': 'firstHeading'})
@@ -261,7 +261,7 @@ def scrape_wikipedia_j1(year: int):
 
     if results_table is None:
         print('  -> No results cross-table found on this page')
-        return None, {}, []
+        return None, {}, [], []
 
     rows_all = results_table.find_all('tr')
 
@@ -286,7 +286,7 @@ def scrape_wikipedia_j1(year: int):
 
     if len(team_list) < 10:
         print('  -> Too few teams extracted from row headers')
-        return None, {}
+        return None, {}, []
 
     # ── Second pass: スコアを解析 ──────────────────────────────────────────
     # クロステーブルの構造:
@@ -343,7 +343,7 @@ def scrape_wikipedia_j1(year: int):
 
     if match_count == 0:
         print('  -> No scores parsed (season may not have results yet)')
-        return None, {}, []
+        return None, {}, [], []
 
     print(f'  -> Success: {match_count} matches, {len(team_stats)} teams')
     return year, team_stats, match_records

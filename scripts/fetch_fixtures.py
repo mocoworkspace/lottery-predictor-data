@@ -6,7 +6,6 @@ from datetime import datetime, timezone
 API_KEY = os.environ['API_KEY']
 BASE_URL = 'https://v3.football.api-sports.io'
 LEAGUE_ID = 98
-SEASON = datetime.now().year  # 現在の年をシーズンとして使用
 
 def fetch(path):
     req = urllib.request.Request(
@@ -16,10 +15,22 @@ def fetch(path):
     with urllib.request.urlopen(req) as resp:
         return json.loads(resp.read())
 
-print(f'Fetching fixtures for J1 season {SEASON}...')
-fixtures_data = fetch(f'/fixtures?league={LEAGUE_ID}&season={SEASON}&next=13')
-fixtures = fixtures_data.get('response', [])
-print(f'  -> {len(fixtures)} fixtures found')
+# 現在年から順に試してデータがあるシーズンを使う
+current_year = datetime.now().year
+SEASON = None
+fixtures = []
+for year in [current_year, current_year - 1]:
+    print(f'Fetching fixtures for J1 season {year}...')
+    data = fetch(f'/fixtures?league={LEAGUE_ID}&season={year}&next=13')
+    fixtures = data.get('response', [])
+    print(f'  -> {len(fixtures)} fixtures found')
+    if fixtures:
+        SEASON = year
+        break
+
+if SEASON is None:
+    SEASON = current_year
+    print('Warning: No upcoming fixtures found for any season.')
 
 print('Fetching standings...')
 standings_data = fetch(f'/standings?league={LEAGUE_ID}&season={SEASON}')

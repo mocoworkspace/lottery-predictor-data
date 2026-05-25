@@ -17,13 +17,22 @@ def fetch(path):
 
 # 現在年から順に試してデータがあるシーズンを使う
 current_year = datetime.now().year
+today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+future = (datetime.now(timezone.utc).replace(month=min(datetime.now().month + 2, 12))).strftime('%Y-%m-%d')
+
 SEASON = None
 fixtures = []
 for year in [current_year, current_year - 1]:
     print(f'Fetching fixtures for J1 season {year}...')
+    # まず next=13 で試す
     data = fetch(f'/fixtures?league={LEAGUE_ID}&season={year}&next=13')
     fixtures = data.get('response', [])
-    print(f'  -> {len(fixtures)} fixtures found')
+    print(f'  -> next=13: {len(fixtures)} fixtures found')
+    if not fixtures:
+        # 日付範囲で再試行
+        data = fetch(f'/fixtures?league={LEAGUE_ID}&season={year}&from={today}&to={future}')
+        fixtures = data.get('response', [])
+        print(f'  -> date range: {len(fixtures)} fixtures found')
     if fixtures:
         SEASON = year
         break

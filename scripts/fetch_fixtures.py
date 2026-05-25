@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import time
 import urllib.request
 from datetime import datetime, timezone
 
@@ -11,6 +12,13 @@ try:
 except ImportError:
     SCRAPING_AVAILABLE = False
     print('Warning: requests/beautifulsoup4 not available, skipping Wikipedia scraping')
+
+# ── スクレイピングポリシー ────────────────────────────────────────────────────
+# Wikipedia の利用規約・robots.txt を遵守する。
+# 週1回・最大3リクエストのみ。リクエスト間に待機時間を設ける。
+SCRAPE_DELAY_SEC = 2      # リクエスト間の待機秒数
+SCRAPE_MAX_RETRIES = 2    # 429/503 時のリトライ回数
+SCRAPE_RETRY_WAIT = 10    # リトライ待機秒数
 
 # ── 設定 ──────────────────────────────────────────────────────────────────────
 API_KEY = os.environ.get('API_KEY', '')
@@ -144,31 +152,78 @@ print(f'fixtures.json updated (fixtures={len(fixtures)}, standings={len(standing
 print('=== Historical Data (Wikipedia CC-BY-SA) ===')
 
 
+_last_request_time: float = 0.0  # レート制限用：最後のリクエスト時刻
+
+
+def _polite_get(url: str, hdrs: dict) -> 'requests.Response | None':
+    """
+    礼儀正しいHTTPリクエスト。
+    - リクエスト間に SCRAPE_DELAY_SEC 秒の待機
+    - 429/503 時は SCRAPE_RETRY_WAIT 秒待ってリトライ
+    """
+    global _last_request_time
+
+    # 前回リクエストからの経過時間を確認し、必要なら待機
+    elapsed = time.time() - _last_request_time
+    if elapsed < SCRAPE_DELAY_SEC:
+        wait = SCRAPE_DELAY_SEC - elapsed
+        print(f'  -> Waiting {wait:.1f}s (rate limit)...')
+        time.sleep(wait)
+
+    for attempt in range(1, SCRAPE_MAX_RETRIES + 2):
+        try:
+            _last_request_time = time.time()
+            resp = requests.get(url, headers=hdrs, timeout=30)
+
+            if resp.status_code in (429, 503):
+                print(f'  -> HTTP {resp.status_code}, '
+                      f'waiting {SCRAPE_RETRY_WAIT}s before retry '
+                      f'(attempt {attempt}/{SCRAPE_MAX_RETRIES + 1})...')
+                time.sleep(SCRAPE_RETRY_WAIT)
+                continue
+
+            return resp
+
+        except requests.RequestException as e:
+            print(f'  -> Request error (attempt {attempt}): {e}')
+            if attempt <= SCRAPE_MAX_RETRIES:
+                time.sleep(SCRAPE_RETRY_WAIT)
+
+    return None
+
+
 def scrape_wikipedia_j1(year: int):
     """
     Wikipedia の J1 League ページから結果クロステーブルをスクレイピングし、
     チームごとのホーム/アウェイ勝率データを返す。
 
-    Source: Wikipedia (CC-BY-SA)
-    https://en.wikipedia.org/wiki/{year}_J1_League
+    【スクレイピングポリシー】
+    - 週1回・最大3リクエストのみ実行（GitHub Actions の cron による）
+    - リクエスト間に待機時間を設け、サーバー負荷を最小化
+    - Wikipedia の robots.txt および利用規約を遵守
+    - Source: Wikipedia (CC-BY-SA)
+      https://en.wikipedia.org/wiki/{year}_J1_League
     """
     url = f'https://en.wikipedia.org/wiki/{year}_J1_League'
     hdrs = {
         'User-Agent': (
             'LotteryPredictorApp/1.0 '
             '(https://github.com/mocoworkspace/lottery-predictor-data; '
-            'open-source personal project)'
+            'open-source personal project; weekly data update only)'
         )
     }
     print(f'Fetching {url} ...')
+    resp = _polite_get(url, hdrs)
+    if resp is None:
+        print('  -> Failed after retries')
+        return None, {}
+    if resp.status_code == 404:
+        print('  -> 404 Not Found')
+        return None, {}
     try:
-        resp = requests.get(url, headers=hdrs, timeout=30)
-        if resp.status_code == 404:
-            print('  -> 404 Not Found')
-            return None, {}
         resp.raise_for_status()
     except Exception as e:
-        print(f'  -> Error fetching: {e}')
+        print(f'  -> HTTP error: {e}')
         return None, {}
 
     if ('Wikipedia does not have an article' in resp.text

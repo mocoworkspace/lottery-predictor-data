@@ -1,2448 +1,1248 @@
 {
-  "updated_at": "2026-05-25T20:16:11.606860+00:00",
-  "season": 2025,
-  "match_count": 380,
+  "updated_at": "2026-05-27T06:19:33.583233+00:00",
+  "season": 2026,
+  "match_count": 180,
   "team_stats": {
-    "アルビレックス新潟": {
-      "home_games": 19,
+    "ジェフユナイテッド千葉": {
+      "home_games": 9,
       "home_wins": 2,
-      "away_games": 19,
-      "away_wins": 2,
-      "home_win_rate": 0.1053,
-      "away_win_rate": 0.1053
-    },
-    "アビスパ福岡": {
-      "home_games": 19,
-      "home_wins": 7,
-      "away_games": 19,
-      "away_wins": 5,
-      "home_win_rate": 0.3684,
-      "away_win_rate": 0.2632
-    },
-    "セレッソ大阪": {
-      "home_games": 19,
-      "home_wins": 8,
-      "away_games": 19,
-      "away_wins": 6,
-      "home_win_rate": 0.4211,
-      "away_win_rate": 0.3158
-    },
-    "ファジアーノ岡山": {
-      "home_games": 19,
-      "home_wins": 7,
-      "away_games": 19,
-      "away_wins": 5,
-      "home_win_rate": 0.3684,
-      "away_win_rate": 0.2632
-    },
-    "ガンバ大阪": {
-      "home_games": 19,
-      "home_wins": 12,
-      "away_games": 19,
-      "away_wins": 5,
-      "home_win_rate": 0.6316,
-      "away_win_rate": 0.2632
+      "away_games": 9,
+      "away_wins": 1,
+      "home_win_rate": 0.2222,
+      "away_win_rate": 0.1111
     },
     "鹿島アントラーズ": {
-      "home_games": 19,
-      "home_wins": 13,
-      "away_games": 19,
-      "away_wins": 10,
-      "home_win_rate": 0.6842,
-      "away_win_rate": 0.5263
-    },
-    "柏レイソル": {
-      "home_games": 19,
-      "home_wins": 12,
-      "away_games": 19,
-      "away_wins": 9,
-      "home_win_rate": 0.6316,
-      "away_win_rate": 0.4737
+      "home_games": 9,
+      "home_wins": 8,
+      "away_games": 9,
+      "away_wins": 5,
+      "home_win_rate": 0.8889,
+      "away_win_rate": 0.5556
     },
     "川崎フロンターレ": {
-      "home_games": 19,
-      "home_wins": 8,
-      "away_games": 19,
-      "away_wins": 7,
-      "home_win_rate": 0.4211,
-      "away_win_rate": 0.3684
+      "home_games": 9,
+      "home_wins": 4,
+      "away_games": 9,
+      "away_wins": 3,
+      "home_win_rate": 0.4444,
+      "away_win_rate": 0.3333
     },
-    "京都サンガ": {
-      "home_games": 19,
-      "home_wins": 9,
-      "away_games": 19,
-      "away_wins": 10,
-      "home_win_rate": 0.4737,
-      "away_win_rate": 0.5263
+    "柏レイソル": {
+      "home_games": 9,
+      "home_wins": 4,
+      "away_games": 9,
+      "away_wins": 2,
+      "home_win_rate": 0.4444,
+      "away_win_rate": 0.2222
     },
     "FC町田ゼルビア": {
-      "home_games": 19,
-      "home_wins": 9,
-      "away_games": 19,
-      "away_wins": 8,
-      "home_win_rate": 0.4737,
-      "away_win_rate": 0.4211
+      "home_games": 9,
+      "home_wins": 4,
+      "away_games": 9,
+      "away_wins": 4,
+      "home_win_rate": 0.4444,
+      "away_win_rate": 0.4444
     },
-    "名古屋グランパス": {
-      "home_games": 19,
-      "home_wins": 8,
-      "away_games": 19,
-      "away_wins": 3,
-      "home_win_rate": 0.4211,
-      "away_win_rate": 0.1579
-    },
-    "サンフレッチェ広島": {
-      "home_games": 19,
-      "home_wins": 10,
-      "away_games": 19,
-      "away_wins": 10,
-      "home_win_rate": 0.5263,
-      "away_win_rate": 0.5263
-    },
-    "湘南ベルマーレ": {
-      "home_games": 19,
-      "home_wins": 5,
-      "away_games": 19,
-      "away_wins": 3,
-      "home_win_rate": 0.2632,
-      "away_win_rate": 0.1579
-    },
-    "清水エスパルス": {
-      "home_games": 19,
-      "home_wins": 6,
-      "away_games": 19,
-      "away_wins": 5,
-      "home_win_rate": 0.3158,
-      "away_win_rate": 0.2632
+    "水戸ホーリーホック": {
+      "home_games": 9,
+      "home_wins": 2,
+      "away_games": 9,
+      "away_wins": 0,
+      "home_win_rate": 0.2222,
+      "away_win_rate": 0.0
     },
     "FC東京": {
-      "home_games": 19,
-      "home_wins": 8,
-      "away_games": 19,
+      "home_games": 9,
+      "home_wins": 4,
+      "away_games": 9,
       "away_wins": 5,
-      "home_win_rate": 0.4211,
-      "away_win_rate": 0.2632
+      "home_win_rate": 0.4444,
+      "away_win_rate": 0.5556
     },
     "東京ヴェルディ": {
-      "home_games": 19,
-      "home_wins": 8,
-      "away_games": 19,
-      "away_wins": 3,
-      "home_win_rate": 0.4211,
-      "away_win_rate": 0.1579
+      "home_games": 9,
+      "home_wins": 5,
+      "away_games": 9,
+      "away_wins": 2,
+      "home_win_rate": 0.5556,
+      "away_win_rate": 0.2222
     },
     "浦和レッズ": {
-      "home_games": 19,
-      "home_wins": 13,
-      "away_games": 19,
-      "away_wins": 3,
-      "home_win_rate": 0.6842,
-      "away_win_rate": 0.1579
-    },
-    "ヴィッセル神戸": {
-      "home_games": 19,
-      "home_wins": 10,
-      "away_games": 19,
-      "away_wins": 8,
-      "home_win_rate": 0.5263,
-      "away_win_rate": 0.4211
-    },
-    "Yokohama FC": {
-      "home_games": 19,
-      "home_wins": 6,
-      "away_games": 19,
-      "away_wins": 3,
-      "home_win_rate": 0.3158,
-      "away_win_rate": 0.1579
+      "home_games": 9,
+      "home_wins": 3,
+      "away_games": 9,
+      "away_wins": 4,
+      "home_win_rate": 0.3333,
+      "away_win_rate": 0.4444
     },
     "横浜F・マリノス": {
-      "home_games": 19,
-      "home_wins": 7,
-      "away_games": 19,
-      "away_wins": 5,
-      "home_win_rate": 0.3684,
-      "away_win_rate": 0.2632
+      "home_games": 9,
+      "home_wins": 2,
+      "away_games": 9,
+      "away_wins": 4,
+      "home_win_rate": 0.2222,
+      "away_win_rate": 0.4444
+    },
+    "アビスパ福岡": {
+      "home_games": 9,
+      "home_wins": 2,
+      "away_games": 9,
+      "away_wins": 2,
+      "home_win_rate": 0.2222,
+      "away_win_rate": 0.2222
+    },
+    "セレッソ大阪": {
+      "home_games": 9,
+      "home_wins": 3,
+      "away_games": 9,
+      "away_wins": 4,
+      "home_win_rate": 0.3333,
+      "away_win_rate": 0.4444
+    },
+    "ファジアーノ岡山": {
+      "home_games": 9,
+      "home_wins": 4,
+      "away_games": 9,
+      "away_wins": 2,
+      "home_win_rate": 0.4444,
+      "away_win_rate": 0.2222
+    },
+    "ガンバ大阪": {
+      "home_games": 9,
+      "home_wins": 3,
+      "away_games": 9,
+      "away_wins": 2,
+      "home_win_rate": 0.3333,
+      "away_win_rate": 0.2222
+    },
+    "京都サンガ": {
+      "home_games": 9,
+      "home_wins": 3,
+      "away_games": 9,
+      "away_wins": 2,
+      "home_win_rate": 0.3333,
+      "away_win_rate": 0.2222
+    },
+    "名古屋グランパス": {
+      "home_games": 9,
+      "home_wins": 5,
+      "away_games": 9,
+      "away_wins": 3,
+      "home_win_rate": 0.5556,
+      "away_win_rate": 0.3333
+    },
+    "サンフレッチェ広島": {
+      "home_games": 9,
+      "home_wins": 4,
+      "away_games": 9,
+      "away_wins": 4,
+      "home_win_rate": 0.4444,
+      "away_win_rate": 0.4444
+    },
+    "清水エスパルス": {
+      "home_games": 9,
+      "home_wins": 2,
+      "away_games": 9,
+      "away_wins": 2,
+      "home_win_rate": 0.2222,
+      "away_win_rate": 0.2222
+    },
+    "V・ファーレン長崎": {
+      "home_games": 9,
+      "home_wins": 3,
+      "away_games": 9,
+      "away_wins": 3,
+      "home_win_rate": 0.3333,
+      "away_win_rate": 0.3333
+    },
+    "ヴィッセル神戸": {
+      "home_games": 9,
+      "home_wins": 6,
+      "away_games": 9,
+      "away_wins": 2,
+      "home_win_rate": 0.6667,
+      "away_win_rate": 0.2222
     }
   },
   "matches": [
     {
-      "home": "アルビレックス新潟",
-      "away": "アビスパ福岡",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "セレッソ大阪",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "ファジアーノ岡山",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "ガンバ大阪",
-      "home_score": 3,
-      "away_score": 3
-    },
-    {
-      "home": "アルビレックス新潟",
+      "home": "ジェフユナイテッド千葉",
       "away": "鹿島アントラーズ",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "柏レイソル",
-      "home_score": 1,
-      "away_score": 3
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "川崎フロンターレ",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "京都サンガ",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "FC町田ゼルビア",
       "home_score": 0,
-      "away_score": 4
+      "away_score": 2
     },
     {
-      "home": "アルビレックス新潟",
-      "away": "名古屋グランパス",
+      "home": "ジェフユナイテッド千葉",
+      "away": "川崎フロンターレ",
       "home_score": 0,
       "away_score": 0
     },
     {
-      "home": "アルビレックス新潟",
-      "away": "サンフレッチェ広島",
-      "home_score": 0,
-      "away_score": 2
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "湘南ベルマーレ",
+      "home": "ジェフユナイテッド千葉",
+      "away": "柏レイソル",
       "home_score": 2,
       "away_score": 1
     },
     {
-      "home": "アルビレックス新潟",
-      "away": "清水エスパルス",
+      "home": "ジェフユナイテッド千葉",
+      "away": "FC町田ゼルビア",
       "home_score": 0,
+      "away_score": 2
+    },
+    {
+      "home": "ジェフユナイテッド千葉",
+      "away": "水戸ホーリーホック",
+      "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "アルビレックス新潟",
+      "home": "ジェフユナイテッド千葉",
       "away": "FC東京",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "ジェフユナイテッド千葉",
+      "away": "東京ヴェルディ",
+      "home_score": 3,
+      "away_score": 2
+    },
+    {
+      "home": "ジェフユナイテッド千葉",
+      "away": "浦和レッズ",
+      "home_score": 0,
+      "away_score": 2
+    },
+    {
+      "home": "ジェフユナイテッド千葉",
+      "away": "横浜F・マリノス",
       "home_score": 2,
       "away_score": 3
     },
     {
-      "home": "アルビレックス新潟",
-      "away": "東京ヴェルディ",
+      "home": "鹿島アントラーズ",
+      "away": "ジェフユナイテッド千葉",
       "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "浦和レッズ",
-      "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "アルビレックス新潟",
-      "away": "ヴィッセル神戸",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "Yokohama FC",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "アルビレックス新潟",
-      "away": "横浜F・マリノス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "アルビレックス新潟",
-      "home_score": 3,
-      "away_score": 2
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "セレッソ大阪",
-      "home_score": 2,
-      "away_score": 4
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "ファジアーノ岡山",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "ガンバ大阪",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "鹿島アントラーズ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "柏レイソル",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "アビスパ福岡",
+      "home": "鹿島アントラーズ",
       "away": "川崎フロンターレ",
       "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "京都サンガ",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "FC町田ゼルビア",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "名古屋グランパス",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "サンフレッチェ広島",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "湘南ベルマーレ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "清水エスパルス",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "FC東京",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "東京ヴェルディ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "浦和レッズ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "ヴィッセル神戸",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "Yokohama FC",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "アビスパ福岡",
-      "away": "横浜F・マリノス",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "アルビレックス新潟",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "アビスパ福岡",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "ファジアーノ岡山",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "ガンバ大阪",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "鹿島アントラーズ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "柏レイソル",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "川崎フロンターレ",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "京都サンガ",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "FC町田ゼルビア",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "名古屋グランパス",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "サンフレッチェ広島",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "湘南ベルマーレ",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "清水エスパルス",
-      "home_score": 4,
-      "away_score": 2
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "FC東京",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "東京ヴェルディ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "浦和レッズ",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "ヴィッセル神戸",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "Yokohama FC",
-      "home_score": 1,
-      "away_score": 3
-    },
-    {
-      "home": "セレッソ大阪",
-      "away": "横浜F・マリノス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "アルビレックス新潟",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "アビスパ福岡",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "セレッソ大阪",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "ガンバ大阪",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "鹿島アントラーズ",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "柏レイソル",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "川崎フロンターレ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "京都サンガ",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "FC町田ゼルビア",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "名古屋グランパス",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "サンフレッチェ広島",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "湘南ベルマーレ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "清水エスパルス",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "FC東京",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "東京ヴェルディ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "浦和レッズ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "ヴィッセル神戸",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "Yokohama FC",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "ファジアーノ岡山",
-      "away": "横浜F・マリノス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "アルビレックス新潟",
-      "home_score": 4,
-      "away_score": 2
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "アビスパ福岡",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "セレッソ大阪",
-      "home_score": 2,
-      "away_score": 5
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "ファジアーノ岡山",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "鹿島アントラーズ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "柏レイソル",
-      "home_score": 0,
-      "away_score": 5
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "川崎フロンターレ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "京都サンガ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "FC町田ゼルビア",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "名古屋グランパス",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "サンフレッチェ広島",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "湘南ベルマーレ",
-      "home_score": 4,
-      "away_score": 0
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "清水エスパルス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "FC東京",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "東京ヴェルディ",
-      "home_score": 4,
-      "away_score": 1
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "浦和レッズ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "ヴィッセル神戸",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "Yokohama FC",
-      "home_score": 3,
-      "away_score": 2
-    },
-    {
-      "home": "ガンバ大阪",
-      "away": "横浜F・マリノス",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "アルビレックス新潟",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "アビスパ福岡",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "セレッソ大阪",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "ファジアーノ岡山",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "ガンバ大阪",
-      "home_score": 0,
       "away_score": 0
     },
     {
       "home": "鹿島アントラーズ",
       "away": "柏レイソル",
-      "home_score": 3,
-      "away_score": 2
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "川崎フロンターレ",
       "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "京都サンガ",
-      "home_score": 3,
-      "away_score": 4
+      "away_score": 0
     },
     {
       "home": "鹿島アントラーズ",
       "away": "FC町田ゼルビア",
       "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "名古屋グランパス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "サンフレッチェ広島",
-      "home_score": 1,
       "away_score": 1
     },
     {
       "home": "鹿島アントラーズ",
-      "away": "湘南ベルマーレ",
+      "away": "水戸ホーリーホック",
       "home_score": 3,
       "away_score": 0
     },
     {
       "home": "鹿島アントラーズ",
-      "away": "清水エスパルス",
+      "away": "FC東京",
       "home_score": 1,
       "away_score": 0
     },
     {
       "home": "鹿島アントラーズ",
-      "away": "FC東京",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "鹿島アントラーズ",
       "away": "東京ヴェルディ",
-      "home_score": 4,
+      "home_score": 2,
       "away_score": 0
     },
     {
       "home": "鹿島アントラーズ",
       "away": "浦和レッズ",
       "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "ヴィッセル神戸",
-      "home_score": 1,
       "away_score": 0
     },
     {
       "home": "鹿島アントラーズ",
-      "away": "Yokohama FC",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "鹿島アントラーズ",
-      "away": "横浜F・マリノス",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "柏レイソル",
-      "away": "アルビレックス新潟",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "柏レイソル",
-      "away": "アビスパ福岡",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "柏レイソル",
-      "away": "セレッソ大阪",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "柏レイソル",
-      "away": "ファジアーノ岡山",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
-      "away": "ガンバ大阪",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
-      "away": "鹿島アントラーズ",
-      "home_score": 1,
-      "away_score": 3
-    },
-    {
-      "home": "柏レイソル",
-      "away": "川崎フロンターレ",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "柏レイソル",
-      "away": "京都サンガ",
-      "home_score": 3,
-      "away_score": 3
-    },
-    {
-      "home": "柏レイソル",
-      "away": "FC町田ゼルビア",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
-      "away": "名古屋グランパス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
-      "away": "サンフレッチェ広島",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
-      "away": "湘南ベルマーレ",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
-      "away": "清水エスパルス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
-      "away": "FC東京",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
-      "away": "東京ヴェルディ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
-      "away": "浦和レッズ",
-      "home_score": 4,
-      "away_score": 2
-    },
-    {
-      "home": "柏レイソル",
-      "away": "ヴィッセル神戸",
-      "home_score": 1,
-      "away_score": 3
-    },
-    {
-      "home": "柏レイソル",
-      "away": "Yokohama FC",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "柏レイソル",
       "away": "横浜F・マリノス",
       "home_score": 1,
       "away_score": 0
     },
     {
       "home": "川崎フロンターレ",
-      "away": "アルビレックス新潟",
-      "home_score": 3,
+      "away": "ジェフユナイテッド千葉",
+      "home_score": 2,
       "away_score": 1
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "アビスパ福岡",
-      "home_score": 2,
-      "away_score": 5
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "セレッソ大阪",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "ファジアーノ岡山",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "ガンバ大阪",
-      "home_score": 2,
-      "away_score": 2
     },
     {
       "home": "川崎フロンターレ",
       "away": "鹿島アントラーズ",
-      "home_score": 2,
-      "away_score": 1
+      "home_score": 0,
+      "away_score": 2
     },
     {
       "home": "川崎フロンターレ",
       "away": "柏レイソル",
-      "home_score": 4,
-      "away_score": 4
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "京都サンガ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "FC町田ゼルビア",
       "home_score": 5,
       "away_score": 3
     },
     {
       "home": "川崎フロンターレ",
-      "away": "名古屋グランパス",
-      "home_score": 4,
-      "away_score": 0
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "サンフレッチェ広島",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "湘南ベルマーレ",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "清水エスパルス",
-      "home_score": 5,
-      "away_score": 3
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "FC東京",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "東京ヴェルディ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "浦和レッズ",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "ヴィッセル神戸",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "Yokohama FC",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "川崎フロンターレ",
-      "away": "横浜F・マリノス",
-      "home_score": 3,
-      "away_score": 3
-    },
-    {
-      "home": "京都サンガ",
-      "away": "アルビレックス新潟",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
-      "away": "アビスパ福岡",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
-      "away": "セレッソ大阪",
-      "home_score": 2,
-      "away_score": 3
-    },
-    {
-      "home": "京都サンガ",
-      "away": "ファジアーノ岡山",
-      "home_score": 5,
-      "away_score": 0
-    },
-    {
-      "home": "京都サンガ",
-      "away": "ガンバ大阪",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
-      "away": "鹿島アントラーズ",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
-      "away": "柏レイソル",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
-      "away": "川崎フロンターレ",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
       "away": "FC町田ゼルビア",
       "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "京都サンガ",
-      "away": "名古屋グランパス",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
-      "away": "サンフレッチェ広島",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "京都サンガ",
-      "away": "湘南ベルマーレ",
+      "home": "川崎フロンターレ",
+      "away": "水戸ホーリーホック",
       "home_score": 2,
-      "away_score": 0
+      "away_score": 2
     },
     {
-      "home": "京都サンガ",
-      "away": "清水エスパルス",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
+      "home": "川崎フロンターレ",
       "away": "FC東京",
-      "home_score": 3,
-      "away_score": 0
+      "home_score": 1,
+      "away_score": 2
     },
     {
-      "home": "京都サンガ",
+      "home": "川崎フロンターレ",
       "away": "東京ヴェルディ",
       "home_score": 1,
       "away_score": 0
     },
     {
-      "home": "京都サンガ",
-      "away": "浦和レッズ",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
-      "away": "ヴィッセル神戸",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "京都サンガ",
-      "away": "Yokohama FC",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "京都サンガ",
-      "away": "横浜F・マリノス",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "アルビレックス新潟",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "アビスパ福岡",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "セレッソ大阪",
-      "home_score": 3,
-      "away_score": 0
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "ファジアーノ岡山",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "ガンバ大阪",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "鹿島アントラーズ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "柏レイソル",
-      "home_score": 3,
-      "away_score": 0
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "川崎フロンターレ",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "京都サンガ",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "名古屋グランパス",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "サンフレッチェ広島",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "湘南ベルマーレ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "清水エスパルス",
-      "home_score": 3,
-      "away_score": 0
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "FC東京",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "東京ヴェルディ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "浦和レッズ",
-      "home_score": 0,
-      "away_score": 2
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "ヴィッセル神戸",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "Yokohama FC",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "FC町田ゼルビア",
-      "away": "横浜F・マリノス",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "アルビレックス新潟",
-      "home_score": 3,
-      "away_score": 0
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "アビスパ福岡",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "セレッソ大阪",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "ファジアーノ岡山",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "ガンバ大阪",
-      "home_score": 0,
-      "away_score": 2
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "鹿島アントラーズ",
-      "home_score": 0,
-      "away_score": 4
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "柏レイソル",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "川崎フロンターレ",
-      "home_score": 3,
-      "away_score": 4
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "京都サンガ",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "FC町田ゼルビア",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "サンフレッチェ広島",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "湘南ベルマーレ",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "清水エスパルス",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "FC東京",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "東京ヴェルディ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "浦和レッズ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "ヴィッセル神戸",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "Yokohama FC",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "名古屋グランパス",
-      "away": "横浜F・マリノス",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "アルビレックス新潟",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "アビスパ福岡",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "セレッソ大阪",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "ファジアーノ岡山",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "ガンバ大阪",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "鹿島アントラーズ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "柏レイソル",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "川崎フロンターレ",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "京都サンガ",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "FC町田ゼルビア",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "名古屋グランパス",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "湘南ベルマーレ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "清水エスパルス",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "FC東京",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "東京ヴェルディ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
+      "home": "川崎フロンターレ",
       "away": "浦和レッズ",
       "home_score": 3,
-      "away_score": 0
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "ヴィッセル神戸",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "Yokohama FC",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "サンフレッチェ広島",
-      "away": "横浜F・マリノス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "湘南ベルマーレ",
-      "away": "アルビレックス新潟",
-      "home_score": 5,
       "away_score": 2
     },
     {
-      "home": "湘南ベルマーレ",
-      "away": "アビスパ福岡",
+      "home": "川崎フロンターレ",
+      "away": "横浜F・マリノス",
       "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "湘南ベルマーレ",
-      "away": "セレッソ大阪",
-      "home_score": 3,
-      "away_score": 3
-    },
-    {
-      "home": "湘南ベルマーレ",
-      "away": "ファジアーノ岡山",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "湘南ベルマーレ",
-      "away": "ガンバ大阪",
-      "home_score": 4,
       "away_score": 5
     },
     {
-      "home": "湘南ベルマーレ",
-      "away": "鹿島アントラーズ",
-      "home_score": 1,
-      "away_score": 0
+      "home": "柏レイソル",
+      "away": "ジェフユナイテッド千葉",
+      "home_score": 4,
+      "away_score": 2
     },
     {
-      "home": "湘南ベルマーレ",
-      "away": "柏レイソル",
+      "home": "柏レイソル",
+      "away": "鹿島アントラーズ",
       "home_score": 0,
       "away_score": 1
     },
     {
-      "home": "湘南ベルマーレ",
+      "home": "柏レイソル",
       "away": "川崎フロンターレ",
       "home_score": 1,
-      "away_score": 2
+      "away_score": 0
     },
     {
-      "home": "湘南ベルマーレ",
-      "away": "京都サンガ",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "湘南ベルマーレ",
+      "home": "柏レイソル",
       "away": "FC町田ゼルビア",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "湘南ベルマーレ",
-      "away": "名古屋グランパス",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "湘南ベルマーレ",
-      "away": "サンフレッチェ広島",
       "home_score": 0,
       "away_score": 1
     },
     {
-      "home": "湘南ベルマーレ",
-      "away": "清水エスパルス",
+      "home": "柏レイソル",
+      "away": "水戸ホーリーホック",
+      "home_score": 3,
+      "away_score": 0
+    },
+    {
+      "home": "柏レイソル",
+      "away": "FC東京",
+      "home_score": 1,
+      "away_score": 3
+    },
+    {
+      "home": "柏レイソル",
+      "away": "東京ヴェルディ",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "柏レイソル",
+      "away": "浦和レッズ",
+      "home_score": 0,
+      "away_score": 1
+    },
+    {
+      "home": "柏レイソル",
+      "away": "横浜F・マリノス",
+      "home_score": 3,
+      "away_score": 0
+    },
+    {
+      "home": "FC町田ゼルビア",
+      "away": "ジェフユナイテッド千葉",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "home": "FC町田ゼルビア",
+      "away": "鹿島アントラーズ",
+      "home_score": 0,
+      "away_score": 3
+    },
+    {
+      "home": "FC町田ゼルビア",
+      "away": "川崎フロンターレ",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "FC町田ゼルビア",
+      "away": "柏レイソル",
       "home_score": 1,
       "away_score": 0
     },
     {
-      "home": "湘南ベルマーレ",
-      "away": "FC東京",
+      "home": "FC町田ゼルビア",
+      "away": "水戸ホーリーホック",
       "home_score": 2,
       "away_score": 2
     },
     {
-      "home": "湘南ベルマーレ",
+      "home": "FC町田ゼルビア",
+      "away": "FC東京",
+      "home_score": 0,
+      "away_score": 3
+    },
+    {
+      "home": "FC町田ゼルビア",
+      "away": "東京ヴェルディ",
+      "home_score": 0,
+      "away_score": 0
+    },
+    {
+      "home": "FC町田ゼルビア",
+      "away": "浦和レッズ",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "FC町田ゼルビア",
+      "away": "横浜F・マリノス",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "home": "水戸ホーリーホック",
+      "away": "ジェフユナイテッド千葉",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "水戸ホーリーホック",
+      "away": "鹿島アントラーズ",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "水戸ホーリーホック",
+      "away": "川崎フロンターレ",
+      "home_score": 1,
+      "away_score": 3
+    },
+    {
+      "home": "水戸ホーリーホック",
+      "away": "柏レイソル",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "home": "水戸ホーリーホック",
+      "away": "FC町田ゼルビア",
+      "home_score": 2,
+      "away_score": 2
+    },
+    {
+      "home": "水戸ホーリーホック",
+      "away": "FC東京",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "水戸ホーリーホック",
       "away": "東京ヴェルディ",
       "home_score": 0,
       "away_score": 1
     },
     {
-      "home": "湘南ベルマーレ",
+      "home": "水戸ホーリーホック",
       "away": "浦和レッズ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "湘南ベルマーレ",
-      "away": "ヴィッセル神戸",
-      "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "湘南ベルマーレ",
-      "away": "Yokohama FC",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "湘南ベルマーレ",
-      "away": "横浜F・マリノス",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "清水エスパルス",
-      "away": "アルビレックス新潟",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "清水エスパルス",
-      "away": "アビスパ福岡",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "清水エスパルス",
-      "away": "セレッソ大阪",
       "home_score": 1,
       "away_score": 4
     },
     {
-      "home": "清水エスパルス",
-      "away": "ファジアーノ岡山",
+      "home": "水戸ホーリーホック",
+      "away": "横浜F・マリノス",
       "home_score": 1,
-      "away_score": 2
-    },
-    {
-      "home": "清水エスパルス",
-      "away": "ガンバ大阪",
-      "home_score": 0,
       "away_score": 0
     },
     {
-      "home": "清水エスパルス",
+      "home": "FC東京",
+      "away": "ジェフユナイテッド千葉",
+      "home_score": 0,
+      "away_score": 3
+    },
+    {
+      "home": "FC東京",
       "away": "鹿島アントラーズ",
       "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "清水エスパルス",
+      "home": "FC東京",
+      "away": "川崎フロンターレ",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "home": "FC東京",
       "away": "柏レイソル",
       "home_score": 0,
       "away_score": 2
     },
     {
-      "home": "清水エスパルス",
-      "away": "川崎フロンターレ",
+      "home": "FC東京",
+      "away": "FC町田ゼルビア",
+      "home_score": 0,
+      "away_score": 0
+    },
+    {
+      "home": "FC東京",
+      "away": "水戸ホーリーホック",
+      "home_score": 5,
+      "away_score": 2
+    },
+    {
+      "home": "FC東京",
+      "away": "東京ヴェルディ",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "home": "FC東京",
+      "away": "浦和レッズ",
       "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "清水エスパルス",
-      "away": "京都サンガ",
+      "home": "FC東京",
+      "away": "横浜F・マリノス",
+      "home_score": 3,
+      "away_score": 0
+    },
+    {
+      "home": "東京ヴェルディ",
+      "away": "ジェフユナイテッド千葉",
       "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "東京ヴェルディ",
+      "away": "鹿島アントラーズ",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "home": "東京ヴェルディ",
+      "away": "川崎フロンターレ",
+      "home_score": 0,
       "away_score": 2
     },
     {
-      "home": "清水エスパルス",
+      "home": "東京ヴェルディ",
+      "away": "柏レイソル",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "東京ヴェルディ",
       "away": "FC町田ゼルビア",
       "home_score": 2,
       "away_score": 2
     },
     {
-      "home": "清水エスパルス",
-      "away": "名古屋グランパス",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "清水エスパルス",
-      "away": "サンフレッチェ広島",
-      "home_score": 1,
+      "home": "東京ヴェルディ",
+      "away": "水戸ホーリーホック",
+      "home_score": 3,
       "away_score": 1
     },
     {
-      "home": "清水エスパルス",
-      "away": "湘南ベルマーレ",
-      "home_score": 3,
-      "away_score": 0
-    },
-    {
-      "home": "清水エスパルス",
+      "home": "東京ヴェルディ",
       "away": "FC東京",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "清水エスパルス",
-      "away": "東京ヴェルディ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "清水エスパルス",
-      "away": "浦和レッズ",
       "home_score": 0,
       "away_score": 0
     },
     {
-      "home": "清水エスパルス",
-      "away": "ヴィッセル神戸",
-      "home_score": 3,
-      "away_score": 2
+      "home": "東京ヴェルディ",
+      "away": "浦和レッズ",
+      "home_score": 1,
+      "away_score": 0
     },
     {
-      "home": "清水エスパルス",
-      "away": "Yokohama FC",
+      "home": "東京ヴェルディ",
+      "away": "横浜F・マリノス",
+      "home_score": 0,
+      "away_score": 6
+    },
+    {
+      "home": "浦和レッズ",
+      "away": "ジェフユナイテッド千葉",
       "home_score": 2,
       "away_score": 0
     },
     {
-      "home": "清水エスパルス",
-      "away": "横浜F・マリノス",
-      "home_score": 1,
+      "home": "浦和レッズ",
+      "away": "鹿島アントラーズ",
+      "home_score": 2,
       "away_score": 3
     },
     {
-      "home": "FC東京",
-      "away": "アルビレックス新潟",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "FC東京",
-      "away": "アビスパ福岡",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "FC東京",
-      "away": "セレッソ大阪",
+      "home": "浦和レッズ",
+      "away": "川崎フロンターレ",
       "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "FC東京",
-      "away": "ファジアーノ岡山",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "FC東京",
-      "away": "ガンバ大阪",
-      "home_score": 3,
       "away_score": 0
     },
     {
-      "home": "FC東京",
-      "away": "鹿島アントラーズ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "FC東京",
+      "home": "浦和レッズ",
       "away": "柏レイソル",
       "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "FC東京",
-      "away": "川崎フロンターレ",
+      "home": "浦和レッズ",
+      "away": "FC町田ゼルビア",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "浦和レッズ",
+      "away": "水戸ホーリーホック",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "home": "浦和レッズ",
+      "away": "FC東京",
       "home_score": 0,
+      "away_score": 0
+    },
+    {
+      "home": "浦和レッズ",
+      "away": "東京ヴェルディ",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "浦和レッズ",
+      "away": "横浜F・マリノス",
+      "home_score": 2,
       "away_score": 3
     },
     {
-      "home": "FC東京",
-      "away": "京都サンガ",
+      "home": "横浜F・マリノス",
+      "away": "ジェフユナイテッド千葉",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "home": "横浜F・マリノス",
+      "away": "鹿島アントラーズ",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "横浜F・マリノス",
+      "away": "川崎フロンターレ",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "横浜F・マリノス",
+      "away": "柏レイソル",
       "home_score": 0,
+      "away_score": 1
+    },
+    {
+      "home": "横浜F・マリノス",
+      "away": "FC町田ゼルビア",
+      "home_score": 2,
+      "away_score": 3
+    },
+    {
+      "home": "横浜F・マリノス",
+      "away": "水戸ホーリーホック",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "横浜F・マリノス",
+      "away": "FC東京",
+      "home_score": 1,
+      "away_score": 3
+    },
+    {
+      "home": "横浜F・マリノス",
+      "away": "東京ヴェルディ",
+      "home_score": 3,
+      "away_score": 2
+    },
+    {
+      "home": "横浜F・マリノス",
+      "away": "浦和レッズ",
+      "home_score": 0,
+      "away_score": 2
+    },
+    {
+      "home": "アビスパ福岡",
+      "away": "セレッソ大阪",
+      "home_score": 0,
+      "away_score": 2
+    },
+    {
+      "home": "アビスパ福岡",
+      "away": "ファジアーノ岡山",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "アビスパ福岡",
+      "away": "ガンバ大阪",
+      "home_score": 2,
+      "away_score": 2
+    },
+    {
+      "home": "アビスパ福岡",
+      "away": "京都サンガ",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "アビスパ福岡",
+      "away": "名古屋グランパス",
+      "home_score": 1,
+      "away_score": 5
+    },
+    {
+      "home": "アビスパ福岡",
+      "away": "サンフレッチェ広島",
+      "home_score": 2,
+      "away_score": 2
+    },
+    {
+      "home": "アビスパ福岡",
+      "away": "清水エスパルス",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "アビスパ福岡",
+      "away": "V・ファーレン長崎",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "アビスパ福岡",
+      "away": "ヴィッセル神戸",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "セレッソ大阪",
+      "away": "アビスパ福岡",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "セレッソ大阪",
+      "away": "ファジアーノ岡山",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "セレッソ大阪",
+      "away": "ガンバ大阪",
+      "home_score": 0,
+      "away_score": 0
+    },
+    {
+      "home": "セレッソ大阪",
+      "away": "京都サンガ",
+      "home_score": 3,
+      "away_score": 0
+    },
+    {
+      "home": "セレッソ大阪",
+      "away": "名古屋グランパス",
+      "home_score": 6,
+      "away_score": 1
+    },
+    {
+      "home": "セレッソ大阪",
+      "away": "サンフレッチェ広島",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "セレッソ大阪",
+      "away": "清水エスパルス",
+      "home_score": 0,
+      "away_score": 0
+    },
+    {
+      "home": "セレッソ大阪",
+      "away": "V・ファーレン長崎",
+      "home_score": 3,
+      "away_score": 2
+    },
+    {
+      "home": "セレッソ大阪",
+      "away": "ヴィッセル神戸",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "ファジアーノ岡山",
+      "away": "アビスパ福岡",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "home": "ファジアーノ岡山",
+      "away": "セレッソ大阪",
+      "home_score": 2,
+      "away_score": 3
+    },
+    {
+      "home": "ファジアーノ岡山",
+      "away": "ガンバ大阪",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "ファジアーノ岡山",
+      "away": "京都サンガ",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "ファジアーノ岡山",
+      "away": "名古屋グランパス",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "ファジアーノ岡山",
+      "away": "サンフレッチェ広島",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "ファジアーノ岡山",
+      "away": "清水エスパルス",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "home": "ファジアーノ岡山",
+      "away": "V・ファーレン長崎",
+      "home_score": 0,
+      "away_score": 1
+    },
+    {
+      "home": "ファジアーノ岡山",
+      "away": "ヴィッセル神戸",
+      "home_score": 1,
       "away_score": 4
     },
     {
-      "home": "FC東京",
-      "away": "FC町田ゼルビア",
+      "home": "ガンバ大阪",
+      "away": "アビスパ福岡",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "ガンバ大阪",
+      "away": "セレッソ大阪",
       "home_score": 0,
       "away_score": 1
     },
     {
-      "home": "FC東京",
-      "away": "名古屋グランパス",
-      "home_score": 3,
-      "away_score": 1
+      "home": "ガンバ大阪",
+      "away": "ファジアーノ岡山",
+      "home_score": 2,
+      "away_score": 2
     },
     {
-      "home": "FC東京",
+      "home": "ガンバ大阪",
+      "away": "京都サンガ",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "home": "ガンバ大阪",
+      "away": "名古屋グランパス",
+      "home_score": 0,
+      "away_score": 0
+    },
+    {
+      "home": "ガンバ大阪",
       "away": "サンフレッチェ広島",
       "home_score": 0,
-      "away_score": 3
+      "away_score": 1
     },
     {
-      "home": "FC東京",
-      "away": "湘南ベルマーレ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "FC東京",
+      "home": "ガンバ大阪",
       "away": "清水エスパルス",
-      "home_score": 0,
+      "home_score": 2,
       "away_score": 2
     },
     {
-      "home": "FC東京",
-      "away": "東京ヴェルディ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "FC東京",
-      "away": "浦和レッズ",
+      "home": "ガンバ大阪",
+      "away": "V・ファーレン長崎",
       "home_score": 3,
       "away_score": 2
     },
     {
-      "home": "FC東京",
+      "home": "ガンバ大阪",
       "away": "ヴィッセル神戸",
-      "home_score": 1,
+      "home_score": 5,
       "away_score": 0
     },
     {
-      "home": "FC東京",
-      "away": "Yokohama FC",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "FC東京",
-      "away": "横浜F・マリノス",
-      "home_score": 2,
-      "away_score": 3
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "アルビレックス新潟",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "東京ヴェルディ",
+      "home": "京都サンガ",
       "away": "アビスパ福岡",
-      "home_score": 0,
+      "home_score": 2,
       "away_score": 0
     },
     {
-      "home": "東京ヴェルディ",
+      "home": "京都サンガ",
       "away": "セレッソ大阪",
       "home_score": 1,
-      "away_score": 0
+      "away_score": 2
     },
     {
-      "home": "東京ヴェルディ",
+      "home": "京都サンガ",
       "away": "ファジアーノ岡山",
-      "home_score": 4,
-      "away_score": 2
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "ガンバ大阪",
-      "home_score": 0,
+      "home_score": 5,
       "away_score": 1
     },
     {
-      "home": "東京ヴェルディ",
-      "away": "鹿島アントラーズ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "柏レイソル",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "川崎フロンターレ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "京都サンガ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "FC町田ゼルビア",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "名古屋グランパス",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "サンフレッチェ広島",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "湘南ベルマーレ",
-      "home_score": 0,
-      "away_score": 2
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "清水エスパルス",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "FC東京",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "浦和レッズ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "ヴィッセル神戸",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "Yokohama FC",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "東京ヴェルディ",
-      "away": "横浜F・マリノス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "アルビレックス新潟",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "アビスパ福岡",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "セレッソ大阪",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "ファジアーノ岡山",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "ガンバ大阪",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "鹿島アントラーズ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "柏レイソル",
-      "home_score": 0,
-      "away_score": 2
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "川崎フロンターレ",
-      "home_score": 4,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "京都サンガ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "FC町田ゼルビア",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "名古屋グランパス",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "サンフレッチェ広島",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "湘南ベルマーレ",
-      "home_score": 4,
-      "away_score": 1
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "清水エスパルス",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "FC東京",
-      "home_score": 3,
-      "away_score": 2
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "東京ヴェルディ",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "ヴィッセル神戸",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "Yokohama FC",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "浦和レッズ",
-      "away": "横浜F・マリノス",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "アルビレックス新潟",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "アビスパ福岡",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "セレッソ大阪",
-      "home_score": 1,
-      "away_score": 3
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "ファジアーノ岡山",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "ガンバ大阪",
-      "home_score": 3,
-      "away_score": 2
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "鹿島アントラーズ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "柏レイソル",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "川崎フロンターレ",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "京都サンガ",
-      "home_score": 1,
-      "away_score": 1
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "FC町田ゼルビア",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "名古屋グランパス",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "サンフレッチェ広島",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "湘南ベルマーレ",
-      "home_score": 4,
-      "away_score": 0
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "清水エスパルス",
-      "home_score": 2,
-      "away_score": 1
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "FC東京",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "東京ヴェルディ",
-      "home_score": 4,
-      "away_score": 0
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "浦和レッズ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "Yokohama FC",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "ヴィッセル神戸",
-      "away": "横浜F・マリノス",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "アルビレックス新潟",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "アビスパ福岡",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "セレッソ大阪",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "ファジアーノ岡山",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "Yokohama FC",
+      "home": "京都サンガ",
       "away": "ガンバ大阪",
       "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "Yokohama FC",
-      "away": "鹿島アントラーズ",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "柏レイソル",
+      "home": "京都サンガ",
+      "away": "名古屋グランパス",
       "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "Yokohama FC",
-      "away": "川崎フロンターレ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "京都サンガ",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "FC町田ゼルビア",
-      "home_score": 0,
-      "away_score": 2
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "名古屋グランパス",
-      "home_score": 2,
-      "away_score": 2
-    },
-    {
-      "home": "Yokohama FC",
+      "home": "京都サンガ",
       "away": "サンフレッチェ広島",
       "home_score": 0,
       "away_score": 4
     },
     {
-      "home": "Yokohama FC",
-      "away": "湘南ベルマーレ",
-      "home_score": 1,
-      "away_score": 0
-    },
-    {
-      "home": "Yokohama FC",
+      "home": "京都サンガ",
       "away": "清水エスパルス",
-      "home_score": 2,
-      "away_score": 0
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "FC東京",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "東京ヴェルディ",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "浦和レッズ",
       "home_score": 1,
       "away_score": 2
     },
     {
-      "home": "Yokohama FC",
+      "home": "京都サンガ",
+      "away": "V・ファーレン長崎",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "京都サンガ",
       "away": "ヴィッセル神戸",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "Yokohama FC",
-      "away": "横浜F・マリノス",
-      "home_score": 0,
-      "away_score": 1
-    },
-    {
-      "home": "横浜F・マリノス",
-      "away": "アルビレックス新潟",
       "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "横浜F・マリノス",
+      "home": "名古屋グランパス",
       "away": "アビスパ福岡",
       "home_score": 2,
+      "away_score": 2
+    },
+    {
+      "home": "名古屋グランパス",
+      "away": "セレッソ大阪",
+      "home_score": 3,
       "away_score": 0
     },
     {
-      "home": "横浜F・マリノス",
-      "away": "セレッソ大阪",
-      "home_score": 3,
+      "home": "名古屋グランパス",
+      "away": "ファジアーノ岡山",
+      "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "横浜F・マリノス",
-      "away": "ファジアーノ岡山",
+      "home": "名古屋グランパス",
+      "away": "ガンバ大阪",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "home": "名古屋グランパス",
+      "away": "京都サンガ",
+      "home_score": 3,
+      "away_score": 0
+    },
+    {
+      "home": "名古屋グランパス",
+      "away": "サンフレッチェ広島",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "home": "名古屋グランパス",
+      "away": "清水エスパルス",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "名古屋グランパス",
+      "away": "V・ファーレン長崎",
+      "home_score": 1,
+      "away_score": 3
+    },
+    {
+      "home": "名古屋グランパス",
+      "away": "ヴィッセル神戸",
+      "home_score": 0,
+      "away_score": 3
+    },
+    {
+      "home": "サンフレッチェ広島",
+      "away": "アビスパ福岡",
       "home_score": 0,
       "away_score": 1
     },
     {
-      "home": "横浜F・マリノス",
+      "home": "サンフレッチェ広島",
+      "away": "セレッソ大阪",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "home": "サンフレッチェ広島",
+      "away": "ファジアーノ岡山",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "サンフレッチェ広島",
       "away": "ガンバ大阪",
       "home_score": 2,
       "away_score": 0
     },
     {
-      "home": "横浜F・マリノス",
-      "away": "鹿島アントラーズ",
-      "home_score": 3,
-      "away_score": 1
-    },
-    {
-      "home": "横浜F・マリノス",
-      "away": "柏レイソル",
-      "home_score": 0,
+      "home": "サンフレッチェ広島",
+      "away": "京都サンガ",
+      "home_score": 1,
       "away_score": 2
     },
     {
-      "home": "横浜F・マリノス",
-      "away": "川崎フロンターレ",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "横浜F・マリノス",
-      "away": "京都サンガ",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "横浜F・マリノス",
-      "away": "FC町田ゼルビア",
-      "home_score": 0,
-      "away_score": 0
-    },
-    {
-      "home": "横浜F・マリノス",
+      "home": "サンフレッチェ広島",
       "away": "名古屋グランパス",
-      "home_score": 3,
-      "away_score": 0
+      "home_score": 4,
+      "away_score": 2
     },
     {
-      "home": "横浜F・マリノス",
-      "away": "サンフレッチェ広島",
-      "home_score": 3,
-      "away_score": 0
-    },
-    {
-      "home": "横浜F・マリノス",
-      "away": "湘南ベルマーレ",
+      "home": "サンフレッチェ広島",
+      "away": "清水エスパルス",
       "home_score": 1,
       "away_score": 1
     },
     {
-      "home": "横浜F・マリノス",
-      "away": "清水エスパルス",
+      "home": "サンフレッチェ広島",
+      "away": "V・ファーレン長崎",
       "home_score": 2,
-      "away_score": 3
-    },
-    {
-      "home": "横浜F・マリノス",
-      "away": "FC東京",
-      "home_score": 0,
-      "away_score": 3
-    },
-    {
-      "home": "横浜F・マリノス",
-      "away": "東京ヴェルディ",
-      "home_score": 0,
       "away_score": 0
     },
     {
-      "home": "横浜F・マリノス",
-      "away": "浦和レッズ",
-      "home_score": 4,
-      "away_score": 0
-    },
-    {
-      "home": "横浜F・マリノス",
+      "home": "サンフレッチェ広島",
       "away": "ヴィッセル神戸",
       "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "清水エスパルス",
+      "away": "アビスパ福岡",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "清水エスパルス",
+      "away": "セレッソ大阪",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "清水エスパルス",
+      "away": "ファジアーノ岡山",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "清水エスパルス",
+      "away": "ガンバ大阪",
+      "home_score": 1,
       "away_score": 2
     },
     {
-      "home": "横浜F・マリノス",
-      "away": "Yokohama FC",
+      "home": "清水エスパルス",
+      "away": "京都サンガ",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "清水エスパルス",
+      "away": "名古屋グランパス",
       "home_score": 0,
+      "away_score": 2
+    },
+    {
+      "home": "清水エスパルス",
+      "away": "サンフレッチェ広島",
+      "home_score": 3,
+      "away_score": 1
+    },
+    {
+      "home": "清水エスパルス",
+      "away": "V・ファーレン長崎",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "清水エスパルス",
+      "away": "ヴィッセル神戸",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "V・ファーレン長崎",
+      "away": "アビスパ福岡",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "V・ファーレン長崎",
+      "away": "セレッソ大阪",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "V・ファーレン長崎",
+      "away": "ファジアーノ岡山",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "home": "V・ファーレン長崎",
+      "away": "ガンバ大阪",
+      "home_score": 1,
+      "away_score": 1
+    },
+    {
+      "home": "V・ファーレン長崎",
+      "away": "京都サンガ",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "V・ファーレン長崎",
+      "away": "名古屋グランパス",
+      "home_score": 1,
+      "away_score": 2
+    },
+    {
+      "home": "V・ファーレン長崎",
+      "away": "サンフレッチェ広島",
+      "home_score": 1,
+      "away_score": 3
+    },
+    {
+      "home": "V・ファーレン長崎",
+      "away": "清水エスパルス",
+      "home_score": 0,
+      "away_score": 3
+    },
+    {
+      "home": "V・ファーレン長崎",
+      "away": "ヴィッセル神戸",
+      "home_score": 2,
+      "away_score": 2
+    },
+    {
+      "home": "ヴィッセル神戸",
+      "away": "アビスパ福岡",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "home": "ヴィッセル神戸",
+      "away": "セレッソ大阪",
+      "home_score": 0,
+      "away_score": 0
+    },
+    {
+      "home": "ヴィッセル神戸",
+      "away": "ファジアーノ岡山",
+      "home_score": 0,
+      "away_score": 3
+    },
+    {
+      "home": "ヴィッセル神戸",
+      "away": "ガンバ大阪",
+      "home_score": 2,
+      "away_score": 2
+    },
+    {
+      "home": "ヴィッセル神戸",
+      "away": "京都サンガ",
+      "home_score": 1,
+      "away_score": 0
+    },
+    {
+      "home": "ヴィッセル神戸",
+      "away": "名古屋グランパス",
+      "home_score": 3,
+      "away_score": 2
+    },
+    {
+      "home": "ヴィッセル神戸",
+      "away": "サンフレッチェ広島",
+      "home_score": 2,
+      "away_score": 1
+    },
+    {
+      "home": "ヴィッセル神戸",
+      "away": "清水エスパルス",
+      "home_score": 2,
+      "away_score": 0
+    },
+    {
+      "home": "ヴィッセル神戸",
+      "away": "V・ファーレン長崎",
+      "home_score": 2,
       "away_score": 0
     }
   ],

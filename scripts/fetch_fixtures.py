@@ -75,7 +75,6 @@ TEAM_NAME_JP = {
 
 
 def resolve_team_name(raw: str) -> str:
-    """英語チーム名を日本語アプリ名に変換。マッピングがなければそのまま返す。"""
     s = raw.strip()
     if s in TEAM_NAME_JP:
         return TEAM_NAME_JP[s]
@@ -97,13 +96,11 @@ SPECIAL_WIKIPEDIA_URLS = {
 
 
 def get_wikipedia_url(year: int) -> str:
-    """指定年のJ1リーグ Wikipedia URL を返す。"""
-    return SPECIAL_WIKIPEDIA_URLS.get(
-        year, 'https://en.wikipedia.org/wiki/{}_J1_League'.format(year))
+    return SPECIAL_WIKIPEDIA_URLS.get(year,
+                                      'https://en.wikipedia.org/wiki/{}_J1_League'.format(year))
 
 
 def apifootball_fetch(path: str) -> dict:
-    """api-football.com からデータを取得（APIキー未設定の場合は空を返す）。"""
     if not API_KEY:
         return {}
     try:
@@ -131,14 +128,14 @@ if API_KEY:
 
     for year in [current_year, current_year - 1]:
         print('Fetching J1 fixtures for season {}...'.format(year))
-        data = apifootball_fetch(
-            '/fixtures?league={}&season={}&next=13'.format(LEAGUE_ID, year))
+        data = apifootball_fetch('/fixtures?league={}&season={}&next=13'.format(LEAGUE_ID, year))
         fixtures = data.get('response', [])
         print('  -> next=13: {} fixtures'.format(len(fixtures)))
         if not fixtures:
             data = apifootball_fetch(
                 '/fixtures?league={}&season={}&from={}&to={}'.format(
-                    LEAGUE_ID, year, today_str, future_str))
+                    LEAGUE_ID, year, today_str, future_str)
+            )
             fixtures = data.get('response', [])
             print('  -> date range: {} fixtures'.format(len(fixtures)))
         if fixtures:
@@ -147,8 +144,7 @@ if API_KEY:
 
     if fixtures:
         print('Fetching standings...')
-        standings_data = apifootball_fetch(
-            '/standings?league={}&season={}'.format(LEAGUE_ID, SEASON))
+        standings_data = apifootball_fetch('/standings?league={}&season={}'.format(LEAGUE_ID, SEASON))
         standings = standings_data.get('response', [])
         print('  -> {} standings entries'.format(len(standings)))
     else:
@@ -164,25 +160,18 @@ fixtures_output = {
 }
 with open('fixtures.json', 'w', encoding='utf-8') as f:
     json.dump(fixtures_output, f, ensure_ascii=False, indent=2)
-print('fixtures.json updated (fixtures={}, standings={}).\n'.format(
-    len(fixtures), len(standings)))
+print('fixtures.json updated (fixtures={}, standings={}).\n'.format(len(fixtures), len(standings)))
 
 
 # ── 2. 過去の試合結果（Wikipedia スクレイピング）────────────────────────────
 print('=== Historical Data (Wikipedia CC-BY-SA) ===')
 
 
-_last_request_time: float = 0.0  # レート制限用：最後のリクエスト時刻
+_last_request_time = 0.0
 
 
-def _polite_get(url: str, hdrs: dict):
-    """
-    礼儀正しいHTTPリクエスト。
-    - リクエスト間に SCRAPE_DELAY_SEC 秒の待機
-    - 429/503 時は SCRAPE_RETRY_WAIT 秒待ってリトライ
-    """
+def _polite_get(url, hdrs):
     global _last_request_time
-
     elapsed = time.time() - _last_request_time
     if elapsed < SCRAPE_DELAY_SEC:
         wait = SCRAPE_DELAY_SEC - elapsed
@@ -194,10 +183,8 @@ def _polite_get(url: str, hdrs: dict):
             _last_request_time = time.time()
             resp = requests.get(url, headers=hdrs, timeout=30)
             if resp.status_code in (429, 503):
-                print('  -> HTTP {}, waiting {}s before retry '
-                      '(attempt {}/{})...'.format(
-                          resp.status_code, SCRAPE_RETRY_WAIT,
-                          attempt, SCRAPE_MAX_RETRIES + 1))
+                print('  -> HTTP {}, waiting {}s before retry (attempt {}/{})...'.format(
+                    resp.status_code, SCRAPE_RETRY_WAIT, attempt, SCRAPE_MAX_RETRIES + 1))
                 time.sleep(SCRAPE_RETRY_WAIT)
                 continue
             return resp
@@ -205,11 +192,10 @@ def _polite_get(url: str, hdrs: dict):
             print('  -> Request error (attempt {}): {}'.format(attempt, e))
             if attempt <= SCRAPE_MAX_RETRIES:
                 time.sleep(SCRAPE_RETRY_WAIT)
-
     return None
 
 
-def _parse_results_table(table) -> tuple:
+def _parse_results_table(table):
     """
     結果クロステーブル1枚をパースしてチームリスト・試合記録・試合数を返す。
     Returns: (team_list, match_records, match_count)
@@ -224,9 +210,8 @@ def _parse_results_table(table) -> tuple:
             continue
         first = cells[0]
         link = first.find('a')
-        raw = (link.get_text(strip=True) if link
-               else first.get_text(strip=True)).strip()
-        if not raw or len(raw) < 2 or re.match(r'^[↓\\↑→←\s\d]+$', raw):
+        raw = (link.get_text(strip=True) if link else first.get_text(strip=True)).strip()
+        if not raw or len(raw) < 2 or re.match(r'^[downarrow\\uparrow\s\d]+$', raw):
             continue
         team_list.append(resolve_team_name(raw))
 
@@ -249,8 +234,8 @@ def _parse_results_table(table) -> tuple:
             cell_idx = j + 1
             if cell_idx >= len(cells):
                 continue
-            score_text = re.sub(r'\[.*?\]',
-                                '', cells[cell_idx].get_text(strip=True)).strip()
+            score_text = re.sub(r'\[.*?\]', '',
+                                cells[cell_idx].get_text(strip=True)).strip()
             m = re.search(r'(\d+)\s*[–—\-]\s*(\d+)', score_text)
             if m:
                 hs, as_ = int(m.group(1)), int(m.group(2))
@@ -265,7 +250,7 @@ def _parse_results_table(table) -> tuple:
     return team_list, match_records, match_count
 
 
-def scrape_wikipedia_j1(year: int):
+def scrape_wikipedia_j1(year):
     """
     Wikipedia の J1 League ページから結果クロステーブルをスクレイピングし、
     チームごとのホーム/アウェイ勝率データを返す。
@@ -277,7 +262,6 @@ def scrape_wikipedia_j1(year: int):
     - リクエスト間に待機時間を設け、サーバー負荷を最小化
     - Wikipedia の robots.txt および利用規約を遵守
     - Source: Wikipedia (CC-BY-SA)
-      https://en.wikipedia.org/wiki/J1_League
     """
     url = get_wikipedia_url(year)
     hdrs = {
@@ -308,8 +292,7 @@ def scrape_wikipedia_j1(year: int):
 
     soup = BeautifulSoup(resp.text, 'lxml')
     h1 = soup.find('h1', {'id': 'firstHeading'})
-    print('  -> Title: {}'.format(
-        h1.get_text(strip=True) if h1 else '(not found)'))
+    print('  -> Title: {}'.format(h1.get_text(strip=True) if h1 else '(not found)'))
 
     all_tables = soup.find_all('table', class_=lambda c: c and 'wikitable' in c)
     print('  -> {} wikitable(s) found'.format(len(all_tables)))
@@ -335,8 +318,8 @@ def scrape_wikipedia_j1(year: int):
     print('  -> Found {} results table(s)'.format(len(results_tables)))
 
     # 全テーブルをパースしてマージ
-    team_stats: dict = {}
-    all_match_records: list = []
+    team_stats = {}
+    all_match_records = []
     total_match_count = 0
 
     for table in results_tables:
@@ -344,8 +327,7 @@ def scrape_wikipedia_j1(year: int):
         if not team_list:
             continue
 
-        print('     Table: {} teams, {} matches'.format(
-            len(team_list), match_count))
+        print('     Table: {} teams, {} matches'.format(len(team_list), match_count))
 
         for t in team_list:
             if t not in team_stats:
@@ -369,7 +351,7 @@ def scrape_wikipedia_j1(year: int):
         all_match_records.extend(match_records)
         total_match_count += match_count
 
-    # 試合数が少なすぎるチームは除外（取得途中データの混入対策）
+    # 試合数が少なすぎるチームは除外
     team_stats = {
         k: v for k, v in team_stats.items()
         if v['home_games'] + v['away_games'] >= 5
@@ -379,58 +361,59 @@ def scrape_wikipedia_j1(year: int):
         print('  -> No scores parsed (season may not have results yet)')
         return None, {}, []
 
-    print('  -> Success: {} matches, {} teams'.format(
-        total_match_count, len(team_stats)))
+    print('  -> Success: {} matches, {} teams'.format(total_match_count, len(team_stats)))
     return year, team_stats, all_match_records
 
 
-historical_season = None
-team_stats = {}
-match_records = []
+# ── 今年・去年の両シーズンを取得して seasons 配列に格納 ────────────────────
+# フォールバックではなく、両年のデータを並存させる。
+# MIN_MATCHES_FOR_INCLUDE 以上の試合データがあるシーズンのみ収録する。
+MIN_MATCHES_FOR_INCLUDE = 30  # シーズンデータを含める最低試合数
 
-MIN_MATCHES_CURRENT = 100   # 進行中シーズンを採用する最低試合数（約5節相当）
-MIN_MATCHES_PREVIOUS = 200  # 前年データを採用する最低試合数
+seasons_list = []
 
 if SCRAPING_AVAILABLE:
-    # 今シーズン → 前年 → 前々年 の順に試みる
-    for hist_year in [current_year, current_year - 1, current_year - 2]:
-        historical_season, team_stats, match_records = scrape_wikipedia_j1(hist_year)
-        if not team_stats:
+    for hist_year in [current_year, current_year - 1]:
+        season_year, season_team_stats, season_match_records = scrape_wikipedia_j1(hist_year)
+        if not season_team_stats:
+            print('J1 {}: no data retrieved, skipping.'.format(hist_year))
             continue
-        total_matches = sum(v['home_games'] for v in team_stats.values())
-        threshold = (MIN_MATCHES_CURRENT if hist_year == current_year
-                     else MIN_MATCHES_PREVIOUS)
-        if total_matches >= threshold:
-            print('Using J1 {} data ({} matches, {} teams).'.format(
-                historical_season, total_matches, len(team_stats)))
-            break
-        else:
-            print('J1 {}: only {} matches (need {}), '
-                  'trying previous year...'.format(
-                      hist_year, total_matches, threshold))
-            team_stats = {}
-            match_records = []
-    if not team_stats:
+        total_matches = sum(v['home_games'] for v in season_team_stats.values())
+        if total_matches < MIN_MATCHES_FOR_INCLUDE:
+            print('J1 {}: only {} matches (need {}), skipping.'.format(
+                hist_year, total_matches, MIN_MATCHES_FOR_INCLUDE))
+            continue
+        # 勝率を計算して追加
+        for stats in season_team_stats.values():
+            hg = max(stats['home_games'], 1)
+            ag = max(stats['away_games'], 1)
+            stats['home_win_rate'] = round(stats['home_wins'] / hg, 4)
+            stats['away_win_rate'] = round(stats['away_wins'] / ag, 4)
+        seasons_list.append({
+            'season': season_year,
+            'match_count': len(season_match_records),
+            'team_stats': season_team_stats,
+            'matches': season_match_records,
+        })
+        print('Added J1 {} data ({} matches, {} teams).'.format(
+            season_year, len(season_match_records), len(season_team_stats)))
+    if not seasons_list:
         print('Warning: Could not retrieve historical data from Wikipedia.')
 else:
     print('Skipping Wikipedia scraping (requests/bs4 not installed).')
 
-# 勝率を追加
-for stats in team_stats.values():
-    hg = max(stats['home_games'], 1)
-    ag = max(stats['away_games'], 1)
-    stats['home_win_rate'] = round(stats['home_wins'] / hg, 4)
-    stats['away_win_rate'] = round(stats['away_wins'] / ag, 4)
-
 historical_output = {
     'updated_at': datetime.now(timezone.utc).isoformat(),
-    'season': historical_season,
-    'match_count': len(match_records),
-    'team_stats': team_stats,
-    'matches': match_records,
+    'seasons': seasons_list,
     'source': 'Wikipedia (CC-BY-SA) https://en.wikipedia.org/wiki/J1_League',
 }
 with open('historical.json', 'w', encoding='utf-8') as f:
     json.dump(historical_output, f, ensure_ascii=False, indent=2)
-print('historical.json updated: season={}, {} teams, {} matches.'.format(
-    historical_season, len(team_stats), len(match_records)))
+
+if seasons_list:
+    print('historical.json updated: {} season(s).'.format(len(seasons_list)))
+    for s in seasons_list:
+        print('  season={}, {} teams, {} matches.'.format(
+            s['season'], len(s['team_stats']), s['match_count']))
+else:
+    print('historical.json updated: no season data (empty).')

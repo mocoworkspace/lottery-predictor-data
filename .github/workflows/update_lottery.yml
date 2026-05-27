@@ -1,0 +1,37 @@
+name: Update Lottery Data
+
+# 抽せん結果は JST 19:45 頃に公開される。
+# 20:00 / 20:30 / 21:00 JST (= 11:00 / 11:30 / 12:00 UTC) に平日のみ実行。
+# 最大3回試みることで取得漏れを防ぐ。スクリプトは冪等（重複追加なし）。
+on:
+  schedule:
+    - cron: '0 11 * * 1-5'   # 20:00 JST  月〜金
+    - cron: '30 11 * * 1-5'  # 20:30 JST  月〜金
+    - cron: '0 12 * * 1-5'   # 21:00 JST  月〜金
+  workflow_dispatch:           # 手動実行も可能
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Python dependencies
+        run: pip install requests
+
+      - name: Fetch lottery draw results
+        run: python scripts/fetch_lottery.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add lottery.json
+          git diff --staged --quiet && echo "No changes." || (
+            git pull --rebase origin main &&
+            git commit -m "Update lottery data $(date +'%Y-%m-%d %H:%M UTC') (auto)" &&
+            git push
+          )

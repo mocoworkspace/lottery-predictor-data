@@ -7,10 +7,9 @@ CSV sources (loto6 / loto7 / miniloto):
   Mini Loto: https://loto-life.net/csv/mini
 
 HTML sources (bingo5 / numbers3 / numbers4):
-  BINGO5   : https://loto-life.net/bingo5
-  Numbers3 : https://loto-life.net/numbers3
-  Numbers4 : https://loto-life.net/numbers4
-  ※ Latest draw only (no bulk CSV available)
+  BINGO5   : https://loto-life.net/bingo5        (latest 1 draw only)
+  Numbers3 : https://loto-life.net/numbers3/past (latest 15 draws)
+  Numbers4 : https://loto-life.net/numbers4/past (latest 15 draws)
 
 Lottery numbers are public information (government-operated lottery).
 """
@@ -49,11 +48,14 @@ CSV_SOURCES = {
     },
 }
 
-# ── HTML タイプ (bingo5 / numbers3 / numbers4) ────────────────────────────────
-HTML_SOURCES = {
-    'bingo5':   'https://loto-life.net/bingo5',
-    'numbers3': 'https://loto-life.net/numbers3',
-    'numbers4': 'https://loto-life.net/numbers4',
+# ── HTML タイプ latest (bingo5) ───────────────────────────────────────────────
+BINGO5_URL = 'https://loto-life.net/bingo5'
+
+# ── HTML タイプ /past ページ (numbers3 / numbers4) ────────────────────────────
+# /past ページは最新15件を一覧表示するため、取りこぼしを防げる
+PAST_SOURCES = {
+    'numbers3': 'https://loto-life.net/numbers3/past',
+    'numbers4': 'https://loto-life.net/numbers4/past',
 }
 
 HEADERS = {
@@ -137,29 +139,21 @@ def fetch_html_http(url: str) -> str | None:
     return resp.content.decode('utf-8', errors='replace')
 
 
-def parse_latest_draw_from_html(lottery_id: str, html: str) -> dict | None:
+def parse_latest_bingo5(html: str) -> dict | None:
     """
-    HTML から最新1件の抽せん結果をパースして返す。失敗時は None を返す。
+    BINGO5 メインページから最新1件をパースする。
 
-    【HTML 構造（共通）】
+    【HTML 構造】
       <tr><td>回別</td>   <td colspan="N">第XXXX回</td></tr>
       <tr><td>抽選日</td> <td colspan="N">YYYY年MM月DD日</td></tr>
-
-    【BINGO5】
       <table class="bingo-table"><tr><td>4</td>...<td>FREE</td>...</tr>...</table>
       ※ FREE セルは \d+ にマッチしないため自動スキップ
-
-    【numbers3 / numbers4】
-      <tr><td>当選番号</td><td colspan="N">667</td></tr>
-      → 1桁ずつ分解: [6, 6, 7]
     """
-    # 回号
     m = re.search(r'回別</td>\s*<td[^>]*>第(\d+)回</td>', html)
     if not m:
         return None
     round_num = int(m.group(1))
 
-    # 抽選日
     m = re.search(
         r'抽選日</td>\s*<td[^>]*>(\d{4})年(\d{1,2})月(\d{1,2})日</td>', html
     )
@@ -167,24 +161,40 @@ def parse_latest_draw_from_html(lottery_id: str, html: str) -> dict | None:
         return None
     date_str = f'{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}'
 
-    # 数字
-    if lottery_id in ('numbers3', 'numbers4'):
-        m = re.search(r'当選番号</td>\s*<td[^>]*>(\d+)</td>', html)
-        if not m:
-            return None
-        numbers = [int(d) for d in m.group(1)]
-    elif lottery_id == 'bingo5':
-        m = re.search(r'class="bingo-table">(.*?)</table>', html, re.DOTALL)
-        if not m:
-            return None
-        numbers = sorted(int(n) for n in re.findall(r'<td>(\d+)</td>', m.group(1)))
-    else:
+    m = re.search(r'class="bingo-table">(.*?)</table>', html, re.DOTALL)
+    if not m:
         return None
-
+    numbers = sorted(int(n) for n in re.findall(r'<td>(\d+)</td>', m.group(1)))
     if not numbers:
         return None
 
     return {'round': round_num, 'date': date_str, 'numbers': numbers}
+
+
+def parse_past_draws_numbers(html: str) -> list[dict]:
+    """
+    numbers3 / numbers4 の /past ページから複数件をパースする。
+
+    【HTML 構造】
+      <th colspan="8">第XXXX回(YYYY年MM月DD日) の抽選結果</th>
+      ...
+      <th>当選番号</th>
+      <td colspan="7">NNN</td>
+
+    → 各回の「第XXXX回(YYYY年MM月DD日)」と直後の「当選番号 ... NNN」を対応付ける。
+    """
+    pattern = (
+        r'第(\d+)回\((\d{4})年(\d{1,2})月(\d{1,2})日\)'
+        r'.*?当選番号\s*</th>\s*<td[^>]*>\s*(\d+)'
+    )
+    draws = []
+    for m in re.finditer(pattern, html, re.DOTALL):
+        round_num = int(m.group(1))
+        date_str  = f'{m.group(2)}-{int(m.group(3)):02d}-{int(m.group(4)):02d}'
+        numbers   = [int(d) for d in m.group(5)]
+        draws.append({'round': round_num, 'date': date_str, 'numbers': numbers})
+    draws.sort(key=lambda d: d['round'], reverse=True)
+    return draws
 
 
 # ── メイン処理 ─────────────────────────────────────────────────────────────────
@@ -232,46 +242,65 @@ for lottery_id, cfg in CSV_SOURCES.items():
         print(f'  -> Using existing data ({count} draws)')
         output[lottery_id] = existing.get(lottery_id, [])
 
-# ── HTML タイプ (bingo5 / numbers3 / numbers4) ────────────────────────────────
-for lottery_id, url in HTML_SOURCES.items():
-    print(f'\n[{lottery_id}] (HTML)')
-
-    html_text = fetch_html_http(url)
-    if html_text is not None:
-        time.sleep(DELAY_SEC)
-
-    prev_draws = existing.get(lottery_id, [])
-
-    if html_text is not None:
-        draw = parse_latest_draw_from_html(lottery_id, html_text)
-        if draw:
-            prev_rounds = {d['round'] for d in prev_draws}
-            new_latest  = draw['round']
-            print(f'  -> Latest: round {new_latest}, {draw["date"]}')
-            if new_latest not in prev_rounds:
-                # 新着データを先頭に追加してソート
-                merged = [draw] + [d for d in prev_draws if d['round'] != new_latest]
-                merged.sort(key=lambda d: d['round'], reverse=True)
-                output[lottery_id] = merged[:MAX_DRAWS]
-                any_updated = True
-                print(f'  -> New draw added.')
-            else:
-                output[lottery_id] = prev_draws
-                print(f'  -> Already up to date.')
-            success_count += 1
+# ── HTML タイプ: BINGO5 (latest 1 draw) ──────────────────────────────────────
+print(f'\n[bingo5] (HTML latest-only)')
+prev_draws = existing.get('bingo5', [])
+html_text  = fetch_html_http(BINGO5_URL)
+if html_text is not None:
+    time.sleep(DELAY_SEC)
+    draw = parse_latest_bingo5(html_text)
+    if draw:
+        prev_rounds = {d['round'] for d in prev_draws}
+        print(f'  -> Latest: round {draw["round"]}, {draw["date"]}')
+        if draw['round'] not in prev_rounds:
+            merged = [draw] + [d for d in prev_draws if d['round'] != draw['round']]
+            merged.sort(key=lambda d: d['round'], reverse=True)
+            output['bingo5'] = merged[:MAX_DRAWS]
+            any_updated = True
+            print('  -> New draw added.')
         else:
-            print('  -> Parse failed (HTML format may have changed)')
-            output[lottery_id] = prev_draws
+            output['bingo5'] = prev_draws
+            print('  -> Already up to date.')
+        success_count += 1
     else:
-        count = len(prev_draws)
-        print(f'  -> Using existing data ({count} draws)')
+        print('  -> Parse failed (HTML format may have changed)')
+        output['bingo5'] = prev_draws
+else:
+    print(f'  -> Using existing data ({len(prev_draws)} draws)')
+    output['bingo5'] = prev_draws
+
+# ── HTML タイプ: numbers3 / numbers4 (/past ページから15件取得) ────────────────
+for lottery_id, past_url in PAST_SOURCES.items():
+    print(f'\n[{lottery_id}] (HTML /past)')
+    prev_draws  = existing.get(lottery_id, [])
+    prev_rounds = {d['round'] for d in prev_draws}
+
+    past_html = fetch_html_http(past_url)
+    if past_html is not None:
+        time.sleep(DELAY_SEC)
+        past_draws = parse_past_draws_numbers(past_html)
+        new_draws  = [d for d in past_draws if d['round'] not in prev_rounds]
+        if new_draws:
+            rounds_added = [d['round'] for d in new_draws]
+            print(f'  -> {len(new_draws)} new draw(s) added: rounds {rounds_added}')
+            merged = new_draws + prev_draws
+            merged.sort(key=lambda d: d['round'], reverse=True)
+            output[lottery_id] = merged[:MAX_DRAWS]
+            any_updated = True
+        else:
+            latest = past_draws[0]['round'] if past_draws else 'N/A'
+            print(f'  -> Already up to date (latest: round {latest})')
+            output[lottery_id] = prev_draws
+        success_count += 1
+    else:
+        print('  -> /past fetch failed, using existing data')
         output[lottery_id] = prev_draws
 
 # ── lottery.json を書き出す ────────────────────────────────────────────────────
 if any_updated or not os.path.exists('lottery.json'):
     with open('lottery.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f'\nlottery.json updated: {success_count}/{len(CSV_SOURCES) + len(HTML_SOURCES)} sources OK.')
+    print(f'\nlottery.json updated: {success_count}/{len(CSV_SOURCES) + 1 + len(PAST_SOURCES)} sources OK.')
 else:
     # 新規抽せんなし → タイムスタンプのみ更新
     existing['updated_at'] = output['updated_at']

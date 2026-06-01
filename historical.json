@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-27T07:08:16.002464+00:00",
+  "updated_at": "2026-06-01T22:52:48.774853+00:00",
   "seasons": [
     {
       "season": 2026,
-      "match_count": 180,
+      "match_count": 189,
       "team_stats": {
         "ジェフユナイテッド千葉": {
           "home_games": 9,
@@ -86,83 +86,83 @@
           "away_win_rate": 0.4444
         },
         "アビスパ福岡": {
-          "home_games": 9,
+          "home_games": 10,
           "home_wins": 2,
           "away_games": 9,
           "away_wins": 2,
-          "home_win_rate": 0.2222,
+          "home_win_rate": 0.2,
           "away_win_rate": 0.2222
         },
         "セレッソ大阪": {
-          "home_games": 9,
+          "home_games": 10,
           "home_wins": 3,
           "away_games": 9,
           "away_wins": 4,
-          "home_win_rate": 0.3333,
+          "home_win_rate": 0.3,
           "away_win_rate": 0.4444
         },
         "ファジアーノ岡山": {
-          "home_games": 9,
+          "home_games": 10,
           "home_wins": 4,
           "away_games": 9,
           "away_wins": 2,
-          "home_win_rate": 0.4444,
+          "home_win_rate": 0.4,
           "away_win_rate": 0.2222
         },
         "ガンバ大阪": {
-          "home_games": 9,
+          "home_games": 10,
           "home_wins": 3,
           "away_games": 9,
           "away_wins": 2,
-          "home_win_rate": 0.3333,
+          "home_win_rate": 0.3,
           "away_win_rate": 0.2222
         },
         "京都サンガ": {
-          "home_games": 9,
+          "home_games": 10,
           "home_wins": 3,
           "away_games": 9,
           "away_wins": 2,
-          "home_win_rate": 0.3333,
+          "home_win_rate": 0.3,
           "away_win_rate": 0.2222
         },
         "名古屋グランパス": {
           "home_games": 9,
           "home_wins": 5,
-          "away_games": 9,
-          "away_wins": 3,
+          "away_games": 18,
+          "away_wins": 4,
           "home_win_rate": 0.5556,
-          "away_win_rate": 0.3333
+          "away_win_rate": 0.2222
         },
         "サンフレッチェ広島": {
-          "home_games": 9,
-          "home_wins": 4,
+          "home_games": 10,
+          "home_wins": 5,
           "away_games": 9,
           "away_wins": 4,
-          "home_win_rate": 0.4444,
+          "home_win_rate": 0.5,
           "away_win_rate": 0.4444
         },
         "清水エスパルス": {
-          "home_games": 9,
+          "home_games": 10,
           "home_wins": 2,
           "away_games": 9,
           "away_wins": 2,
-          "home_win_rate": 0.2222,
+          "home_win_rate": 0.2,
           "away_win_rate": 0.2222
         },
         "V・ファーレン長崎": {
-          "home_games": 9,
-          "home_wins": 3,
+          "home_games": 10,
+          "home_wins": 4,
           "away_games": 9,
           "away_wins": 3,
-          "home_win_rate": 0.3333,
+          "home_win_rate": 0.4,
           "away_win_rate": 0.3333
         },
         "ヴィッセル神戸": {
-          "home_games": 9,
-          "home_wins": 6,
+          "home_games": 10,
+          "home_wins": 7,
           "away_games": 9,
           "away_wins": 2,
-          "home_win_rate": 0.6667,
+          "home_win_rate": 0.7,
           "away_win_rate": 0.2222
         }
       },
@@ -1246,6 +1246,60 @@
           "away": "V・ファーレン長崎",
           "home_score": 2,
           "away_score": 0
+        },
+        {
+          "home": "ヴィッセル神戸",
+          "away": "名古屋グランパス",
+          "home_score": 5,
+          "away_score": 0
+        },
+        {
+          "home": "セレッソ大阪",
+          "away": "名古屋グランパス",
+          "home_score": 2,
+          "away_score": 2
+        },
+        {
+          "home": "サンフレッチェ広島",
+          "away": "名古屋グランパス",
+          "home_score": 2,
+          "away_score": 1
+        },
+        {
+          "home": "ガンバ大阪",
+          "away": "名古屋グランパス",
+          "home_score": 1,
+          "away_score": 1
+        },
+        {
+          "home": "ファジアーノ岡山",
+          "away": "名古屋グランパス",
+          "home_score": 1,
+          "away_score": 1
+        },
+        {
+          "home": "清水エスパルス",
+          "away": "名古屋グランパス",
+          "home_score": 1,
+          "away_score": 1
+        },
+        {
+          "home": "京都サンガ",
+          "away": "名古屋グランパス",
+          "home_score": 2,
+          "away_score": 6
+        },
+        {
+          "home": "V・ファーレン長崎",
+          "away": "名古屋グランパス",
+          "home_score": 1,
+          "away_score": 0
+        },
+        {
+          "home": "アビスパ福岡",
+          "away": "名古屋グランパス",
+          "home_score": 2,
+          "away_score": 2
         }
       ]
     },
